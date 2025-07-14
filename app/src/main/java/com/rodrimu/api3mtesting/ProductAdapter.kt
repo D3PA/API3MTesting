@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import androidx.core.content.ContextCompat
 
 class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(DIFF_CALLBACK) {
 
@@ -22,9 +23,16 @@ class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(DI
             itemView.findViewById<TextView>(R.id.idText).text = "ID: ${item.id}"
             itemView.findViewById<TextView>(R.id.nombreText).text = item.name
             itemView.findViewById<TextView>(R.id.descripcionText).text = item.description
-            itemView.findViewById<TextView>(R.id.precioText).text = "Precio: ${item.price}"
+            itemView.findViewById<TextView>(R.id.precioText).text = "Precio: ${item.price}$"
             itemView.findViewById<TextView>(R.id.divisaText).text = "Moneda: ${item.currency}"
-            itemView.findViewById<TextView>(R.id.enStockText).text = if (item.in_stock) "En stock" else "Sin stock"
+            val enStockTextView = itemView.findViewById<TextView>(R.id.enStockText)
+            if (item.in_stock) {
+                enStockTextView.text = "En stock"
+                enStockTextView.setTextColor(ContextCompat.getColor(itemView.context, R.color.stock_green))
+            } else {
+                enStockTextView.text = "Sin stock"
+                enStockTextView.setTextColor(ContextCompat.getColor(itemView.context, R.color.stock_red))
+            }
         }
     }
 

@@ -13,6 +13,7 @@
         android:theme="@style/Theme.API3MTesting">
         <activity
             android:name=".MainActivity"
+            android:label="Teclab API 3 - Rodrigo Muñoz"
             android:exported="true"
             android:theme="@style/Theme.API3MTesting">
             <intent-filter>
