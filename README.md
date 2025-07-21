@@ -1,6 +1,6 @@
-# 🛒 API 3 Mobile Testing
+# 📱 API 3 Mobile Testing
 
-## 📱 Descripción
+## 📌 Descripción
 
 Este proyecto corresponde a la **Actividad 3** de Mobile Testing para Teclab, en el cual se desarrolla una aplicación Android utilizando **Kotlin**. La app tiene como objetivo conectarse a una API externa y mostrar un **listado de productos** disponibles en una tienda e-commerce.
 
