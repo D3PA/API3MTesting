@@ -1,4 +1,4 @@
-# 🛒 API 3 Mobile Testing – Listado de Productos para E-Commerce
+# 🛒 API 3 Mobile Testing
 
 ## 📱 Descripción
 
